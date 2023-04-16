@@ -1,8 +1,20 @@
 <script lang="ts">
 	import { enhance } from '$app/forms'
 	import { CheckCircle } from 'lucide-svelte'
+	import { 
+		PUBLIC_PRICE_LOOKUP_KEY_ONE_TIME,
+		PUBLIC_PRICE_LOOKUP_KEY_MONTHLY,  
+		PUBLIC_PRICE_LOOKUP_KEY_YEARLY
+		} from '$env/static/public'
+
+	export prices: [] = [
+		PUBLIC_PRICE_LOOKUP_KEY_ONE_TIME,
+		PUBLIC_PRICE_LOOKUP_KEY_MONTHLY,  
+		PUBLIC_PRICE_LOOKUP_KEY_YEARLY
+		]
 </script>
 
+{#each prices as price}
 <section class="card m-auto mt-16 max-w-sm p-8">
 	<h2>Enterprise</h2>
 	<p class="description mt-8 text-gray-400">A plan that scales with you.</p>
@@ -35,8 +47,9 @@
 		<input
 			type="hidden"
 			name="priceId"
-			value="price_1MmhOkELPOBIZNpzNzbcEB2r"
+			value={PUBLIC_PRICE_LOOKUP_KEY_ONE_TIME}
 		/>
 		<button class="btn variant-filled-primary mt-16 w-full">Checkout</button>
 	</form>
 </section>
+{/each}
