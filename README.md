@@ -1,3 +1,28 @@
+# NOTES: 
+
+## This [repo](lgs/enterprise-stack) is a fork of [joysofcode/enterprise-stack](joysofcode/enterprise-stack) Keeping track of multiple Git remote repositories. I use it to customize part of the original, to use in my on deployments but is not neccesssarely intended to pull requests back to the upstream.
+
+```
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/lgs/enterprise-stack.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[remote "upstream"]
+	url = https://github.com/joysofcode/enterprise-stack.git
+	fetch = +refs/heads/*:refs/remotes/upstream/*
+[branch "upstream"]
+	remote = upstream
+	merge = refs/heads/main
+```
+
+
 # The SvelteKit Enterprise Stack
 
 Time is money and setting up a project can be time consuming when you could be working on the business logic instead.
