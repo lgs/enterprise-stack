@@ -1,6 +1,6 @@
 # NOTES: 
 
-## This [repo](lgs/enterprise-stack) is a fork of [joysofcode/enterprise-stack](joysofcode/enterprise-stack) Keeping track of multiple Git remote repositories. I use it to customize part of the original, to use in my on deployments but is not neccesssarely intended to pull requests back to the upstream.
+## This [repo](https://github.com/lgs/enterprise-stack/tree/main) is a fork of [joysofcode/enterprise-stack](https://github.com/joysofcode/enterprise-stack) Keeping track of multiple Git remote repositories. I use it to customize part of the original, to use in my on deployments but is not neccesssarely intended to pull requests back to the upstream.
 
 ```
 [core]
